@@ -10,7 +10,6 @@
 #import "YoutubeVideoDownloader.h"
 #import <AVFoundation/AVFoundation.h>
 #import "NSString+UUID.h"
-#import "EPSongLookup.h"
 
 #define kActivityStringDownloading @"Downloading video.."
 #define kActivityStringStripping @"Stripping audio..."
@@ -103,12 +102,6 @@
         weakSelf.currentActivityString = kActivityStringStripping;
         
         [weakSelf getAudioDataFromVideoData:data completionHandler:^(NSData *audioData) {
-            
-            [EPSongLookup lookupSongWithData:audioData completionHandler:^(NSDictionary *dictionary) {
-                
-                NSLog(@"Dictionary:%@", dictionary);
-                
-            }];
             
             weakSelf.progress = 0.95;
            

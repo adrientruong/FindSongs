@@ -106,8 +106,8 @@
 
 - (void)requestFinishForYouTube:(GDataServiceTicket *)ticket finishedWithFeed:(GDataFeedBase *)feed error:(NSError *)error
 {
-    
-    NSRange range = NSMakeRange(0, [[self.searchResultsArrayController arrangedObjects] count]);
+    NSArray *objects = [self.searchResultsArrayController arrangedObjects];
+    NSRange range = NSMakeRange(0, [objects count]);
     
     [self.searchResultsArrayController removeObjectsAtArrangedObjectIndexes:[NSIndexSet indexSetWithIndexesInRange:range]];
     

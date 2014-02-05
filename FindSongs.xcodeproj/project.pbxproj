@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A5F5509168A8777001D4B72 /* GData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A5F5500168A8773001D4B72 /* GData.framework */; };
 		7A5F5531168A8B40001D4B72 /* FSYTVideoSearchWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5F552F168A8B40001D4B72 /* FSYTVideoSearchWindowController.m */; };
 		7A5F5532168A8B40001D4B72 /* FSYTVideoSearchWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A5F5530168A8B40001D4B72 /* FSYTVideoSearchWindow.xib */; };
 		7A5F5541168ADAC7001D4B72 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A5F5540168ADAC7001D4B72 /* AVFoundation.framework */; };
@@ -34,14 +33,8 @@
 		7A666BE4174020F700E316BD /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A666BDB174020F700E316BD /* UIImageView+AFNetworking.m */; };
 		7A666BE6174021AB00E316BD /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A666BE5174021AB00E316BD /* CoreAudio.framework */; };
 		7A666BE8174021B400E316BD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A666BE7174021B400E316BD /* AudioToolbox.framework */; };
-		7A666BF11740227400E316BD /* Codegen_wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A666BED1740227400E316BD /* Codegen_wrapper.cpp */; };
-		7A666BF5174023ED00E316BD /* CADebugPrintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A666BF3174023ED00E316BD /* CADebugPrintf.cpp */; };
-		7A666BF8174024EF00E316BD /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A666BF6174024EF00E316BD /* CAXException.cpp */; };
 		7A666BFA1740251200E316BD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A666BF91740251200E316BD /* libz.dylib */; };
-		7A666BFD174026E100E316BD /* EPSongLookup.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A666BFC174026E100E316BD /* EPSongLookup.m */; };
 		7A666C001740294D00E316BD /* NSURL+SystemDirectories.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A666BFF1740294C00E316BD /* NSURL+SystemDirectories.m */; };
-		7A666C0217402AA000E316BD /* libcodegen.4.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A666C0117402AA000E316BD /* libcodegen.4.1.1.dylib */; };
-		7A666C0317402B3800E316BD /* libcodegen.4.1.1.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = 7A666C0117402AA000E316BD /* libcodegen.4.1.1.dylib */; };
 		7A98A484168A7C8B00238792 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A98A483168A7C8B00238792 /* Cocoa.framework */; };
 		7A98A48E168A7C8B00238792 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A98A48C168A7C8B00238792 /* InfoPlist.strings */; };
 		7A98A490168A7C8B00238792 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A98A48F168A7C8B00238792 /* main.m */; };
@@ -52,52 +45,8 @@
 		7A98A4D1168A801400238792 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A98A4D0168A801400238792 /* SystemConfiguration.framework */; };
 		7AABA47816B0F90A0022043A /* FSTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AABA47716B0F90A0022043A /* FSTaskManager.m */; };
 		7ACD7EF5179B74CF00B55876 /* LBYouTubeExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD7EF4179B74CF00B55876 /* LBYouTubeExtractor.m */; };
+		EA320DC53D644F70A9443BA6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73948F1E4B9F4A29A0E34FB5 /* libPods.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		7A5F54FF168A8773001D4B72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7A5F54F3168A8772001D4B72 /* GData.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4F38F6A60B66E91D00B24B81;
-			remoteInfo = GDataFramework;
-		};
-		7A5F5501168A8773001D4B72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7A5F54F3168A8772001D4B72 /* GData.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4F1C6E0F1027B3CE00B46459;
-			remoteInfo = GDataTouchStaticLib;
-		};
-		7A5F5503168A8773001D4B72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7A5F54F3168A8772001D4B72 /* GData.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4F14A9DD0B1276B70072EBB8;
-			remoteInfo = GDataUnitTests;
-		};
-		7A5F5505168A8773001D4B72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7A5F54F3168A8772001D4B72 /* GData.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4F85E018103B83B700B4C418;
-			remoteInfo = GDataIPhoneUnitTests;
-		};
-		7A5F5507168A8773001D4B72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7A5F54F3168A8772001D4B72 /* GData.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4F1AD9020B71603F00DC0485;
-			remoteInfo = DevelopmentTestTool;
-		};
-		7A5F5527168A886D001D4B72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7A5F54F3168A8772001D4B72 /* GData.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 4F38F6A50B66E91D00B24B81;
-			remoteInfo = GDataFramework;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7A98A61F168A846200238792 /* Copy Files */ = {
@@ -106,7 +55,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				7A666C0317402B3800E316BD /* libcodegen.4.1.1.dylib in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,7 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7A5F54F3168A8772001D4B72 /* GData.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GData.xcodeproj; path = "../gdata-objectivec-client-read-only/Source/GData.xcodeproj"; sourceTree = "<group>"; };
+		73948F1E4B9F4A29A0E34FB5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5F552E168A8B40001D4B72 /* FSYTVideoSearchWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSYTVideoSearchWindowController.h; sourceTree = "<group>"; };
 		7A5F552F168A8B40001D4B72 /* FSYTVideoSearchWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSYTVideoSearchWindowController.m; sourceTree = "<group>"; };
 		7A5F5530168A8B40001D4B72 /* FSYTVideoSearchWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSYTVideoSearchWindow.xib; sourceTree = "<group>"; };
@@ -161,21 +109,9 @@
 		7A666BDB174020F700E316BD /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		7A666BE5174021AB00E316BD /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		7A666BE7174021B400E316BD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		7A666BEA1740227400E316BD /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
-		7A666BEB1740227400E316BD /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
-		7A666BEC1740227400E316BD /* Codegen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Codegen.h; sourceTree = "<group>"; };
-		7A666BED1740227400E316BD /* Codegen_wrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Codegen_wrapper.cpp; sourceTree = "<group>"; };
-		7A666BEE1740227400E316BD /* Codegen_wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Codegen_wrapper.h; sourceTree = "<group>"; };
-		7A666BF3174023ED00E316BD /* CADebugPrintf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugPrintf.cpp; sourceTree = "<group>"; };
-		7A666BF4174023ED00E316BD /* CADebugPrintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugPrintf.h; sourceTree = "<group>"; };
-		7A666BF6174024EF00E316BD /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
-		7A666BF7174024EF00E316BD /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
 		7A666BF91740251200E316BD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		7A666BFB174026E100E316BD /* EPSongLookup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSongLookup.h; sourceTree = "<group>"; };
-		7A666BFC174026E100E316BD /* EPSongLookup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSongLookup.m; sourceTree = "<group>"; };
 		7A666BFE1740294C00E316BD /* NSURL+SystemDirectories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+SystemDirectories.h"; sourceTree = "<group>"; };
 		7A666BFF1740294C00E316BD /* NSURL+SystemDirectories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+SystemDirectories.m"; sourceTree = "<group>"; };
-		7A666C0117402AA000E316BD /* libcodegen.4.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcodegen.4.1.1.dylib; sourceTree = "<group>"; };
 		7A98A47F168A7C8B00238792 /* FindSongs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindSongs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A98A483168A7C8B00238792 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		7A98A486168A7C8B00238792 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -195,6 +131,7 @@
 		7AABA47716B0F90A0022043A /* FSTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTaskManager.m; sourceTree = "<group>"; };
 		7ACD7EF3179B74CF00B55876 /* LBYouTubeExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTubeExtractor.h; sourceTree = "<group>"; };
 		7ACD7EF4179B74CF00B55876 /* LBYouTubeExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYouTubeExtractor.m; sourceTree = "<group>"; };
+		88B22C9E8A4E436EA90DE16B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,29 +146,16 @@
 				7A63A21F168C16F300424DAA /* QTKit.framework in Frameworks */,
 				7A5F5546168AF8AF001D4B72 /* CoreMedia.framework in Frameworks */,
 				7A5F5541168ADAC7001D4B72 /* AVFoundation.framework in Frameworks */,
-				7A5F5509168A8777001D4B72 /* GData.framework in Frameworks */,
 				7A98A4D1168A801400238792 /* SystemConfiguration.framework in Frameworks */,
 				7A98A4CF168A800E00238792 /* Security.framework in Frameworks */,
 				7A98A484168A7C8B00238792 /* Cocoa.framework in Frameworks */,
-				7A666C0217402AA000E316BD /* libcodegen.4.1.1.dylib in Frameworks */,
+				EA320DC53D644F70A9443BA6 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7A5F54F4168A8772001D4B72 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7A5F5500168A8773001D4B72 /* GData.framework */,
-				7A5F5502168A8773001D4B72 /* libGDataTouchStaticLib.a */,
-				7A5F5504168A8773001D4B72 /* GDataUnitTests.octest */,
-				7A5F5506168A8773001D4B72 /* GDataIPhoneUnitTests.octest */,
-				7A5F5508168A8773001D4B72 /* DevelopmentTestTool */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		7A666BC8174020F700E316BD /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,29 +182,13 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
-		7A666BE91740227400E316BD /* Echoprint */ = {
-			isa = PBXGroup;
-			children = (
-				7A666BF3174023ED00E316BD /* CADebugPrintf.cpp */,
-				7A666BF4174023ED00E316BD /* CADebugPrintf.h */,
-				7A666BEA1740227400E316BD /* CADebugMacros.h */,
-				7A666BEB1740227400E316BD /* CAStreamBasicDescription.h */,
-				7A666BEC1740227400E316BD /* Codegen.h */,
-				7A666BED1740227400E316BD /* Codegen_wrapper.cpp */,
-				7A666BEE1740227400E316BD /* Codegen_wrapper.h */,
-				7A666BF6174024EF00E316BD /* CAXException.cpp */,
-				7A666BF7174024EF00E316BD /* CAXException.h */,
-			);
-			path = Echoprint;
-			sourceTree = "<group>";
-		};
 		7A98A474168A7C8B00238792 = {
 			isa = PBXGroup;
 			children = (
-				7A5F54F3168A8772001D4B72 /* GData.xcodeproj */,
 				7A98A489168A7C8B00238792 /* FindSongs */,
 				7A98A482168A7C8B00238792 /* Frameworks */,
 				7A98A480168A7C8B00238792 /* Products */,
+				88B22C9E8A4E436EA90DE16B /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -295,7 +203,6 @@
 		7A98A482168A7C8B00238792 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7A666C0117402AA000E316BD /* libcodegen.4.1.1.dylib */,
 				7A666BF91740251200E316BD /* libz.dylib */,
 				7A666BE7174021B400E316BD /* AudioToolbox.framework */,
 				7A666BE5174021AB00E316BD /* CoreAudio.framework */,
@@ -307,6 +214,7 @@
 				7A98A4CE168A800E00238792 /* Security.framework */,
 				7A98A483168A7C8B00238792 /* Cocoa.framework */,
 				7A98A485168A7C8B00238792 /* Other Frameworks */,
+				73948F1E4B9F4A29A0E34FB5 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -324,7 +232,6 @@
 		7A98A489168A7C8B00238792 /* FindSongs */ = {
 			isa = PBXGroup;
 			children = (
-				7A666BE91740227400E316BD /* Echoprint */,
 				7A666BC8174020F700E316BD /* AFNetworking */,
 				7A98A495168A7C8B00238792 /* AppDelegate.h */,
 				7A98A496168A7C8B00238792 /* AppDelegate.m */,
@@ -339,8 +246,6 @@
 				7AABA47716B0F90A0022043A /* FSTaskManager.m */,
 				7A63A228168CF94D00424DAA /* FSGetSongFromYoutubeVideoTask.h */,
 				7A63A229168CF94D00424DAA /* FSGetSongFromYoutubeVideoTask.m */,
-				7A666BFB174026E100E316BD /* EPSongLookup.h */,
-				7A666BFC174026E100E316BD /* EPSongLookup.m */,
 				7A63A23B168CFC8200424DAA /* NSString+UUID.h */,
 				7A63A23C168CFC8200424DAA /* NSString+UUID.m */,
 				7ACD7EF3179B74CF00B55876 /* LBYouTubeExtractor.h */,
@@ -382,17 +287,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A98A49D168A7C8B00238792 /* Build configuration list for PBXNativeTarget "FindSongs" */;
 			buildPhases = (
+				37D99F48C7E242B88F09DC63 /* Check Pods Manifest.lock */,
 				7A98A47B168A7C8B00238792 /* Sources */,
 				7A98A47C168A7C8B00238792 /* Frameworks */,
 				7A98A47D168A7C8B00238792 /* Resources */,
 				7A98A61F168A846200238792 /* Copy Files */,
 				7A98A64D168A866700238792 /* Strip Headers */,
-				7A98A64E168A868400238792 /* Copy GData.framework to BUILT_PRODUCTS_DIR */,
+				865CFAEDA62A4FAF9ACE2305 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7A5F5528168A886D001D4B72 /* PBXTargetDependency */,
 			);
 			name = FindSongs;
 			productName = FindSongs;
@@ -418,56 +323,12 @@
 			mainGroup = 7A98A474168A7C8B00238792;
 			productRefGroup = 7A98A480168A7C8B00238792 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 7A5F54F4168A8772001D4B72 /* Products */;
-					ProjectRef = 7A5F54F3168A8772001D4B72 /* GData.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				7A98A47E168A7C8B00238792 /* FindSongs */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		7A5F5500168A8773001D4B72 /* GData.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GData.framework;
-			remoteRef = 7A5F54FF168A8773001D4B72 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7A5F5502168A8773001D4B72 /* libGDataTouchStaticLib.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libGDataTouchStaticLib.a;
-			remoteRef = 7A5F5501168A8773001D4B72 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7A5F5504168A8773001D4B72 /* GDataUnitTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GDataUnitTests.octest;
-			remoteRef = 7A5F5503168A8773001D4B72 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7A5F5506168A8773001D4B72 /* GDataIPhoneUnitTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GDataIPhoneUnitTests.octest;
-			remoteRef = 7A5F5505168A8773001D4B72 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7A5F5508168A8773001D4B72 /* DevelopmentTestTool */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = DevelopmentTestTool;
-			remoteRef = 7A5F5507168A8773001D4B72 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7A98A47D168A7C8B00238792 /* Resources */ = {
@@ -484,6 +345,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		37D99F48C7E242B88F09DC63 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		7A98A64D168A866700238792 /* Strip Headers */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -499,19 +375,20 @@
 			shellScript = ./buildStripHeaders;
 			showEnvVarsInLog = 0;
 		};
-		7A98A64E168A868400238792 /* Copy GData.framework to BUILT_PRODUCTS_DIR */ = {
+		865CFAEDA62A4FAF9ACE2305 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy GData.framework to BUILT_PRODUCTS_DIR";
+			name = "Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = ./buildCopyScript;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -542,24 +419,12 @@
 				7A666BE2174020F700E316BD /* AFURLConnectionOperation.m in Sources */,
 				7A666BE3174020F700E316BD /* AFXMLRequestOperation.m in Sources */,
 				7A666BE4174020F700E316BD /* UIImageView+AFNetworking.m in Sources */,
-				7A666BF11740227400E316BD /* Codegen_wrapper.cpp in Sources */,
-				7A666BF5174023ED00E316BD /* CADebugPrintf.cpp in Sources */,
-				7A666BF8174024EF00E316BD /* CAXException.cpp in Sources */,
-				7A666BFD174026E100E316BD /* EPSongLookup.m in Sources */,
 				7A666C001740294D00E316BD /* NSURL+SystemDirectories.m in Sources */,
 				7ACD7EF5179B74CF00B55876 /* LBYouTubeExtractor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7A5F5528168A886D001D4B72 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GDataFramework;
-			targetProxy = 7A5F5527168A886D001D4B72 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7A98A48C168A7C8B00238792 /* InfoPlist.strings */ = {
@@ -644,6 +509,7 @@
 		};
 		7A98A49E168A7C8B00238792 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88B22C9E8A4E436EA90DE16B /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)";
@@ -673,6 +539,7 @@
 		};
 		7A98A49F168A7C8B00238792 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88B22C9E8A4E436EA90DE16B /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)";
