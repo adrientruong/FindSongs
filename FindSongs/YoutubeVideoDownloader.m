@@ -7,14 +7,15 @@
 //
 
 #import "YoutubeVideoDownloader.h"
+#import <XCDYouTubeExtractor.h>
 
-@interface YoutubeVideoDownloader () <LBYouTubeExtractorDelegate, NSURLConnectionDataDelegate>
+@interface YoutubeVideoDownloader () <NSURLConnectionDataDelegate>
 
-@property (nonatomic, copy, readwrite) NSURL *youtubeURL;
+@property (nonatomic, copy, readwrite) NSString *videoID;
 
 @property (nonatomic, copy) NSURL *videoURL;
 @property (nonatomic, strong) NSURLConnection *connection;
-@property (nonatomic, strong) LBYouTubeExtractor *youtubeExtractor;
+@property (nonatomic, strong) XCDYouTubeExtractor *youtubeExtractor;
 
 @property (nonatomic, strong) NSMutableData *videoData;
 @property (nonatomic, strong) NSNumber *expectedVideoDataLengthNumber;
@@ -29,10 +30,10 @@
 
 #pragma mark - Creating a Downloader
 
-+ (YoutubeVideoDownloader *)videoDownloaderForYoutubeURL:(NSURL *)url completionHandler:(YoutubeVideoDownloaderCompletionHandler)handler
++ (YoutubeVideoDownloader *)videoDownloaderForYoutubeVideoID:(NSString *)videoID completionHandler:(YoutubeVideoDownloaderCompletionHandler)handler
 {
     
-    YoutubeVideoDownloader *downloader = [[self alloc] initWithYoutubeURL:url];
+    YoutubeVideoDownloader *downloader = [[self alloc] initWithYoutubeVideoID:videoID];
     
     downloader.completionHandler = handler;
     
@@ -40,29 +41,18 @@
     
 }
 
-- (id)initWithYoutubeURL:(NSURL *)youtubeURL
+- (id)initWithYoutubeVideoID:(NSString *)videoID
 {
     
     self = [super init];
     
     if (self != nil) {
         
-        self.youtubeURL = youtubeURL;
-        self.videoQuality = LBYouTubeVideoQualityMedium;
+        self.videoID = videoID;
+        self.videoQuality = XCDYouTubeVideoQualityHD720;
         self.downloading = NO;
         
     }
-    
-    return self;
-    
-}
-
-- (id)initWithYoutubeVideoID:(NSString *)videoID
-{
-    
-    NSString *urlString = [NSString stringWithFormat:@"http://www.youtube.com/watch?v=%@", videoID];
-    
-    self = [self initWithYoutubeURL:[NSURL URLWithString:urlString]];
     
     return self;
     
@@ -78,13 +68,17 @@
     self.progress = 0;
     
     if (self.videoURL == nil) {
+        self.youtubeExtractor = [[XCDYouTubeExtractor alloc] initWithVideoIdentifier:self.videoID];
+        [self.youtubeExtractor startWithCompletionHandler:^(NSDictionary *info, NSError *error) {
+            if (info == nil) {
+                self.downloading = NO;
+                return;
+            }
+            
+            self.videoURL = info[@(self.videoQuality)];
+            [self actuallyStartDownloading];
+        }];
         
-        self.youtubeExtractor = [[LBYouTubeExtractor alloc] initWithURL:self.youtubeURL quality:self.videoQuality];
-        
-        self.youtubeExtractor.delegate = self;
-        
-        [self.youtubeExtractor startExtracting];
-                
     }
     else {
         
@@ -97,7 +91,7 @@
 - (void)stopDownloading
 {
     
-    [self.youtubeExtractor stopExtracting];
+    [self.youtubeExtractor cancel];
     [self.connection cancel];
     
     self.downloading = NO;
@@ -199,28 +193,6 @@
     self.completionHandler(nil, error);
     
     self.connection = nil;
-    
-    self.downloading = NO;
-    
-}
-
-#pragma mark - LBYoutubeExtractor Delegate Methods
-
-- (void)youTubeExtractor:(LBYouTubeExtractor *)extractor didSuccessfullyExtractYouTubeURL:(NSURL *)videoURL
-{
-    
-    self.videoURL = videoURL;
-    
-    [self actuallyStartDownloading];
-        
-}
-
-- (void)youTubeExtractor:(LBYouTubeExtractor *)extractor failedExtractingYouTubeURLWithError:(NSError *)error
-{
-    
-    NSLog(@"failed extracting with error:%@", error);
-    
-    self.completionHandler(nil, error);
     
     self.downloading = NO;
     

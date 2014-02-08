@@ -44,7 +44,6 @@
 		7A98A4CF168A800E00238792 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A98A4CE168A800E00238792 /* Security.framework */; };
 		7A98A4D1168A801400238792 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A98A4D0168A801400238792 /* SystemConfiguration.framework */; };
 		7AABA47816B0F90A0022043A /* FSTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AABA47716B0F90A0022043A /* FSTaskManager.m */; };
-		7ACD7EF5179B74CF00B55876 /* LBYouTubeExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD7EF4179B74CF00B55876 /* LBYouTubeExtractor.m */; };
 		EA320DC53D644F70A9443BA6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73948F1E4B9F4A29A0E34FB5 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -129,8 +128,6 @@
 		7A98A4D0168A801400238792 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7AABA47616B0F90A0022043A /* FSTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTaskManager.h; sourceTree = "<group>"; };
 		7AABA47716B0F90A0022043A /* FSTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTaskManager.m; sourceTree = "<group>"; };
-		7ACD7EF3179B74CF00B55876 /* LBYouTubeExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTubeExtractor.h; sourceTree = "<group>"; };
-		7ACD7EF4179B74CF00B55876 /* LBYouTubeExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYouTubeExtractor.m; sourceTree = "<group>"; };
 		88B22C9E8A4E436EA90DE16B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -248,8 +245,6 @@
 				7A63A229168CF94D00424DAA /* FSGetSongFromYoutubeVideoTask.m */,
 				7A63A23B168CFC8200424DAA /* NSString+UUID.h */,
 				7A63A23C168CFC8200424DAA /* NSString+UUID.m */,
-				7ACD7EF3179B74CF00B55876 /* LBYouTubeExtractor.h */,
-				7ACD7EF4179B74CF00B55876 /* LBYouTubeExtractor.m */,
 				7A63A1D4168BAA5600424DAA /* NSNumber+TimeFormat.h */,
 				7A63A1D5168BAA5600424DAA /* NSNumber+TimeFormat.m */,
 				7A63A1E7168BAACB00424DAA /* TMKUtilities.h */,
@@ -420,7 +415,6 @@
 				7A666BE3174020F700E316BD /* AFXMLRequestOperation.m in Sources */,
 				7A666BE4174020F700E316BD /* UIImageView+AFNetworking.m in Sources */,
 				7A666C001740294D00E316BD /* NSURL+SystemDirectories.m in Sources */,
-				7ACD7EF5179B74CF00B55876 /* LBYouTubeExtractor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,7 +511,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FindSongs/FindSongs-Prefix.pch";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "FindSongs/FindSongs-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -547,7 +541,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FindSongs/FindSongs-Prefix.pch";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "FindSongs/FindSongs-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

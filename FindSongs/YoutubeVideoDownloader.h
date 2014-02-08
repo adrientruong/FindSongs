@@ -7,23 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LBYouTubeExtractor.h"
+#import <XCDYouTubeConstants.h>
 
 typedef void (^YoutubeVideoDownloaderCompletionHandler)(NSData *videoData, NSError *error);
 
 @interface YoutubeVideoDownloader : NSObject
 
-@property (nonatomic, copy, readonly) NSURL *youtubeURL;
+@property (nonatomic, copy, readonly) NSString *videoID;
 @property (nonatomic, copy) YoutubeVideoDownloaderCompletionHandler completionHandler;
-@property (nonatomic, assign) LBYouTubeVideoQuality videoQuality;
+@property (nonatomic, assign) XCDYouTubeVideoQuality videoQuality;
 @property (nonatomic, assign, getter = isDownloading) BOOL downloading;
 @property (nonatomic, assign, readonly) float progress;
 
-+ (YoutubeVideoDownloader *)videoDownloaderForYoutubeURL:(NSURL *)url completionHandler:(YoutubeVideoDownloaderCompletionHandler)handler;
++ (YoutubeVideoDownloader *)videoDownloaderForYoutubeVideoID:(NSString *)videoID completionHandler:(YoutubeVideoDownloaderCompletionHandler)handler;
 
-- (id)initWithYoutubeURL:(NSURL *)youtubeURL;
 - (id)initWithYoutubeVideoID:(NSString *)videoID;
-
 
 - (void)startDownloading;
 - (void)stopDownloading;

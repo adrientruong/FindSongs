@@ -7,7 +7,7 @@
 //
 
 #import "FSYTVideoSearchWindowController.h"
-#import "LBYouTubeExtractor.h"
+#import <XCDYouTubeExtractor.h>
 #import <AVFoundation/AVFoundation.h>
 #import "YoutubeVideoDownloader.h"
 #import <QuartzCore/QuartzCore.h>
@@ -16,7 +16,7 @@
 #import "BDDiscreteProgressCell.h"
 #import "FSTaskManager.h"
 
-@interface FSYTVideoSearchWindowController () <LBYouTubeExtractorDelegate, NSTableViewDelegate>
+@interface FSYTVideoSearchWindowController () <NSTableViewDelegate>
 
 @property (nonatomic, weak) IBOutlet NSArrayController *searchResultsArrayController;
 @property (nonatomic, weak) IBOutlet NSTableView *searchResultsTableView;
@@ -30,7 +30,7 @@
 
 @property (nonatomic, strong) NSArray *searchResults;
 
-@property (nonatomic, strong) LBYouTubeExtractor *youtubeExtractor;
+@property (nonatomic, strong) XCDYouTubeExtractor *youtubeExtractor;
 
 @property (nonatomic, assign) NSInteger selectedRow;
 
@@ -136,12 +136,39 @@
     
     NSString *videoID = [mediaGroup videoID];
         
-    self.youtubeExtractor = [[LBYouTubeExtractor alloc] initWithID:videoID quality:LBYouTubeVideoQualityLarge];
+    self.youtubeExtractor = [[XCDYouTubeExtractor alloc] initWithVideoIdentifier:videoID];
     
-    self.youtubeExtractor.delegate = self;
-    
-    [self.youtubeExtractor startExtracting];
+    [self.youtubeExtractor startWithCompletionHandler:^(NSDictionary *info, NSError *error) {
+        if (info == nil) {
+            NSLog(@"Failed to extract URL for playback:%@", [error userInfo]);
+            return;
+        }
         
+        NSArray *videoQualities = @[@(XCDYouTubeVideoQualityHD720), @(XCDYouTubeVideoQualityMedium360), @(XCDYouTubeVideoQualitySmall240)];
+        
+        NSURL *URL = nil;
+        for (NSNumber *quality in videoQualities) {
+            URL = info[quality];
+            if (URL != nil) {
+                break;
+            }
+        }
+        self.moviePlayerController = [[JKSMoviePlayerController alloc] initWithContentURL:URL];
+        self.moviePlayerController.scalingMode = JKSMoviePlayerScalingResizeAspect;
+        
+        [self.moviePlayerContainerView addSubview:self.moviePlayerController.view];
+        
+        NSView *movieView = self.moviePlayerController.view;
+        
+        [self.moviePlayerContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[movieView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(movieView)]];
+        [self.moviePlayerContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[movieView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(movieView)]];
+        
+        [self.moviePlayerController play];
+        
+        self.youtubeExtractor = nil;
+
+    }];
+    
 }
 
 - (IBAction)userDidHitEnterOnSearch:(NSSearchField *)searchField
@@ -184,45 +211,6 @@
     
 }
 
-#pragma mark - LBYoutubeExtractor Delegate Methods
-
-- (void)youTubeExtractor:(LBYouTubeExtractor *)extractor didSuccessfullyExtractYouTubeURL:(NSURL *)videoURL
-{
-    
-    [self.moviePlayerController.view removeFromSuperview];
-    
-    self.moviePlayerController = [[JKSMoviePlayerController alloc] initWithContentURL:videoURL];
-    self.moviePlayerController.scalingMode = JKSMoviePlayerScalingResizeAspect;
-        
-    [self.moviePlayerContainerView addSubview:self.moviePlayerController.view];
-    
-    NSView *movieView = self.moviePlayerController.view;
-
-    [self.moviePlayerContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[movieView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(movieView)]];
-    [self.moviePlayerContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[movieView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(movieView)]];
-    
-    [self.moviePlayerController play];
-    
-    if (extractor == self.youtubeExtractor) {
-        
-        self.youtubeExtractor = nil;
-        
-    }
-        
-}
-
-- (void)youTubeExtractor:(LBYouTubeExtractor *)extractor failedExtractingYouTubeURLWithError:(NSError *)error
-{
-   
-    if (extractor == self.youtubeExtractor) {
-        
-        self.youtubeExtractor = nil;
-        
-    }
-    
-    NSLog(@"Failed to extract URL for playback:%@", [error userInfo]);
-    
-}
 
 #pragma mark - NSTableViewDelegate
 

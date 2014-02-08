@@ -20,14 +20,24 @@ PODS:
   - GTMHTTPFetcher (0.0.2):
     - SBJson (~> 3.2)
   - SBJson (3.2)
+  - XCDYouTubeVideoPlayerViewController (1.2.0):
+    - XCDYouTubeVideoPlayerViewController/Extractor
+    - XCDYouTubeVideoPlayerViewController/iOSVideoPlayer
+  - XCDYouTubeVideoPlayerViewController/Extractor (1.2.0)
 
 DEPENDENCIES:
   - GData/Core
+  - XCDYouTubeVideoPlayerViewController (from `https://github.com/adrientruong/XCDYouTubeVideoPlayerViewController.git`)
+
+EXTERNAL SOURCES:
+  XCDYouTubeVideoPlayerViewController:
+    :git: https://github.com/adrientruong/XCDYouTubeVideoPlayerViewController.git
 
 SPEC CHECKSUMS:
   GData: e95aa598080c7de8b1c954d3cc8b98c2b4ac3534
   gtm-oauth2: 6528b10a61eb9b6710f6277341e2926371a12c15
   GTMHTTPFetcher: df09cf49e95d471d9f321a8eea3d1c22bc45547e
   SBJson: abc2bf2baef456d5dae213f9826fe2b6fdf19861
+  XCDYouTubeVideoPlayerViewController: b282d454e3177ff0d2a2197910143a05e05bb8f4
 
 COCOAPODS: 0.29.0

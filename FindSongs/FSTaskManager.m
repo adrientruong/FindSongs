@@ -8,7 +8,8 @@
 
 #import "FSTaskManager.h"
 #import "FSGetSongFromYoutubeVideoTask.h"
-#import "LBYouTubeExtractor.h"
+#import <GData.h>
+#import <XCDYouTubeExtractor.h>
 
 @interface FSTaskManager ()
 
